@@ -12,6 +12,7 @@ def load_and_clean_data():
 
     df = df.fillna("")
 
+    #TF-IDF 
     df["combined"] = (
     df["Top"] + ", " +
     df["Middle"] + ", " +
@@ -21,10 +22,17 @@ def load_and_clean_data():
     df["mainaccord3"]
     )
 
+    #BERT
+    df["bert_text"] = (
+    "This fragrance has top notes of " + df["Top"] +
+    ", middle notes of " + df["Middle"] +
+    ", base notes of " + df["Base"] +
+    ". Main accords include " +
+    df["mainaccord1"] + ", " +
+    df["mainaccord2"] + ", " +
+    df["mainaccord3"] + ".")
     df["combined"] = df["combined"].str.lower().str.replace("unknown", "")
 
     df = df.drop_duplicates(subset=["Perfume", "Brand"])
-
-    print(df.head())
 
     return df

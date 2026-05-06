@@ -1,0 +1,7 @@
+So i made tf idf model however i ahve noticed that it takes a few seconds for it to to show the result 
+and since its tfidf the results arent teh most accurate. I wanna make somethign which doesnt need exact
+words and can understand context. This is why I am choosing BERT however bert is even slower than 
+tf idf thus i will combine BERT with FIASS which will make the result even faster
+
+TF-IDF surprisingly outperformed embeddings on sparse keyword-based fragrance metadata. To improve
+semantic retrieval, I engineered natural-language scent descriptions for Sentence-BERT embeddings.
