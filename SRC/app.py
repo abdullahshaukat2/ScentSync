@@ -34,3 +34,5 @@ if query:
     st.subheader("Affordable Alternatives")
 
     st.dataframe(dupes)
+
+    
