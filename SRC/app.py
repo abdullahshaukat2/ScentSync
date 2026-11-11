@@ -75,6 +75,10 @@ label[data-baseweb="checkbox"]:has(input:checked) > div:first-child > div { back
 .card.dupe .bar > div { background: var(--dupe); }
 .empty { color: var(--muted); text-align: center; padding: 1.5rem; border: 1px dashed var(--line); border-radius: 16px; }
 .foot { text-align: center; color: var(--muted); font-size: .75rem; margin-top: 3rem; }
+.more { text-align: center; margin-top: 3.5rem; padding: 1.4rem 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+.more a { color: var(--accent) !important; text-decoration: none; font-weight: 600; border-bottom: 1px solid var(--accent-soft); }
+.more a:hover { border-bottom-color: var(--accent); }
+.more + .foot { margin-top: .4rem; }
 @media (max-width: 600px) {
   .hero h1 { font-size: 3rem; }
   .card { grid-template-columns: 1.8rem 1fr; }
@@ -183,4 +187,10 @@ if query:
     )
     render(dupes, dupe=True)
 
+st.markdown(
+    '<div class="more">If you would like to see more of my projects, visit my '
+    '<a href="https://github.com/abdullahshaukat2" target="_blank" rel="noopener">GitHub</a> or my '
+    '<a href="https://abdullahshaukat2.github.io/" target="_blank" rel="noopener">website</a>.</div>',
+    unsafe_allow_html=True,
+)
 st.markdown('<div class="foot">ScentSync · 24,000+ fragrances from Fragrantica</div>', unsafe_allow_html=True)
